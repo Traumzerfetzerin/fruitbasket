@@ -1,2 +1,19 @@
 <p>fruitlist works {{howItWorks}}!</p>
+
 <p>fruitlist works {{fruitlist[1].name}}!</p>
+
+@for(item of fruitlist; track item.name) {
+    <p>{{item.name}}</p>
+}
+
+@for(item of fruitlist; track item.name; let index = $index) {
+    <p>{{index}}: {{item.name}}</p>
+}
+
+@for(item of fruitlist; track item.name; let last = $last) {
+    <p>{{last}}: {{item.name}}</p>
+}
+
+@for(item of fruitlist; track item.name; let first = $first) {
+    <p>{{first}}: {{item.name}}</p>
+}

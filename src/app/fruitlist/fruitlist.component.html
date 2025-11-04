@@ -39,7 +39,7 @@
                 <p><b>Bewertung:</b></p>
                 <div>
 
-                    @for(count of [1,2,3,4]; track fruitlist){
+                    <!-- @for(count of [1,2,3,4]; track fruitlist){
 
                         @if(item.stars >= count) {
                             <img src="./assets/img/stars/star.svg" alt="" srcset="">
@@ -47,6 +47,24 @@
                             <img src="./assets/img/stars/star-half.svg" alt="" srcset="">
                         } @else {
                             <img src="./assets/img/stars/star-empty.svg" alt="" srcset="">
+                        }
+                    } -->
+
+                    @for(count of [1,2,3,4]; track fruitlist){
+                        @switch(item.stars >= count) {
+                            @case(true) {
+                                <img src="./assets/img/stars/star.svg" alt="" srcset="">
+                            }
+                            @case(false) {
+                                @switch(item.stars >= count - 0.5) {
+                                    @case(true) {
+                                        <img src="./assets/img/stars/star-half.svg" alt="" srcset="">
+                                    }
+                                    @case(false) {
+                                        <img src="./assets/img/stars/star-empty.svg" alt="" srcset="">
+                                    }
+                                }
+                            }
                         }
                     }
 

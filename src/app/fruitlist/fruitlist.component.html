@@ -68,7 +68,8 @@
                         }
                     }
 
-                    <p>({{item.stars}})</p>
+                    <p [ngStyle]="{'color': fontColor}">({{item.stars}})</p>
+                    <!-- <p [ngStyle]="{'background-color': fontColor}">({{item.stars}})</p> -->
 
                 </div>
             </div>

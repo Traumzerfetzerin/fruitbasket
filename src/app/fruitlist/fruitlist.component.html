@@ -68,9 +68,11 @@
                         }
                     }
 
-                    <p [ngStyle]="{'color': item.stars < 3.5 ? fontColorBad : fontColorGood}">({{item.stars}})</p>
+                    <!-- <p [ngStyle]="{'color': item.stars < 3.5 ? fontColorBad : fontColorGood}">({{item.stars}})</p> -->
                     <!-- <p [ngStyle]="{'color': item.stars < 3.5 ? fontColorBad : fontColorGood, 'background-color': 'blue'}">({{item.stars}})</p> -->
                     <!-- <p [ngStyle]="{'background-color': fontColor}">({{item.stars}})</p> -->
+
+                    <p [ngClass]="{'fontColorBad': item.stars < 3, 'fontColorGood': item.stars >= 3}">({{item.stars}})</p>
 
                 </div>
             </div>

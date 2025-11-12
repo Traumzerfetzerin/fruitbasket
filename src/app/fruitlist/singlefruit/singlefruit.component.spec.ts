@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SinglefruitComponentComponent } from './singlefruit.component';
+import { SinglefruitComponent } from './singlefruit.component';
 
 describe('SinglefruitComponentComponent', () => {
-  let component: SinglefruitComponentComponent;
-  let fixture: ComponentFixture<SinglefruitComponentComponent>;
+  let component: SinglefruitComponent;
+  let fixture: ComponentFixture<SinglefruitComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SinglefruitComponentComponent]
+      imports: [SinglefruitComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SinglefruitComponentComponent);
+    fixture = TestBed.createComponent(SinglefruitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

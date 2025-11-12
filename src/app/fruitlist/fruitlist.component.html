@@ -19,8 +19,8 @@
 } -->
 
 <div class="fruitlist_content">
-    @for(item of fruitlist; track item.name){
-
+    <!-- @for(item of fruitlist; track item.name){ -->
+         @for(item of fruitlist; track item.name; let index = $index) {
 
 
     <section class="singleFruitBox">
@@ -34,7 +34,8 @@
             <img src="./assets/img/fruits/{{item.img}}" alt="" srcset="">
         </div>
         <div>
-            <h2> <app-singlefruit></app-singlefruit> {{item.name}}</h2>
+            <!-- <h2> <app-singlefruit [fruitnumber]="index"></app-singlefruit> {{item.name}}</h2> -->
+            <h2> <app-singlefruit [testNumber]="index"></app-singlefruit> {{item.name}}</h2>
             <div>
                 <p><b>Bewertung:</b></p>
                 <div>

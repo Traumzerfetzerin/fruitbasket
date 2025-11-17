@@ -67,7 +67,14 @@ export class FruitlistComponent {
     },
   ]
 
-  nameLog(name:string) {
-    console.log(name);
+  addComment(comment: string, index: number) {
+    this.fruitlist[index].reviews.push({
+      name: "Nadja",
+      text: comment
+    });
   }
+
+  // nameLog(name: string) {
+  //   console.log(name);
+  // }
 }

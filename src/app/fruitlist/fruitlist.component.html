@@ -20,7 +20,7 @@
 
 <div class="fruitlist_content">
     <!-- @for(item of fruitlist; track item.name){ -->
-    @for(singlefruit of fruitlist; track singlefruit.name; let index = $index) {
+    @for(singlefruit of fruitlistdata.fruitlist; track singlefruit.name; let index = $index) {
 
     <app-singlefruit (fruitname)="addComment($event, index)" [fruit]="singlefruit"></app-singlefruit>
     <!-- <app-singlefruit (fruitname)="nameLog($event)" [fruit]="singlefruit"></app-singlefruit> -->
